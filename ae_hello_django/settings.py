@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pn7)0kkfg&u1jee7&j^^2hyia+c#x$ohfug+h*&6v2qa6dt*wv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -71,15 +72,57 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ae_hello_django.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+def isLocal():
+    try:
+        return os.environ["SERVER_NAME"] in ["localhost","127.0.0.1"]
+    except KeyError:
+        return True
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+
+# 2st generation cloud sql
+CLOUDSQL_PROJECT = 'justgo-188407'
+CLOUDSQL_REGION = 'us-east1'
+CLOUDSQL_INSTANCE = 'hellocloud-sql'
+
+# 1st generation cloud sql
+# CLOUDSQL_PROJECT = 'justgo-188407'
+# CLOUDSQL_INSTANCE = 'hellosql-instance'
+
+
+if isLocal():
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'hellocloud_database',
+            'USER': 'admin',
+            'PASSWORD': 'XXXX',
+            'HOST': '173.194.228.248',
+            'PORT': '3306',
+        }
+    }
+else:
+    DEBUG = False
+    # 2st generation cloud sql
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'hellocloud_database',
+            'USER': 'admin',
+            'PASSWORD': 'XXXX',
+            'HOST': '/cloudsql/' + CLOUDSQL_PROJECT + ":" + CLOUDSQL_REGION + ":" + CLOUDSQL_INSTANCE
+        }
+    }
+
+    # 1st generation cloud sql
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'hellocloud_database',
+    #         'USER': 'root',
+    #         'HOST': '/cloudsql/' + CLOUDSQL_PROJECT + ":" + CLOUDSQL_INSTANCE,
+    #     }
+    # }
+
 
 
 # Password validation
