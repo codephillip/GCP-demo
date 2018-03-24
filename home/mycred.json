@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "justgo-188407",
+  "private_key_id": "5af8b74a67abf594f1da8477e61d5d226b720189",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDPFbD0IJXEBElr\nHIOQuRM/b0abM9+gxkrXWEMfKZFnyqWjvi4er6zzABVeNLZL4xkO3AmKwXkY6HZV\ntznI1cADWAJK/w1YltortpWDa9bkohcYIyDpC3EpBPBqzGTryGjWzRKcCkrKCIea\n6l8WeZg/5EhvQcWlxSWWbB0Ii+DoL32mYeX6ndOf1CEPh10Br45687msII/tD+WB\nCr0k9Y/SPLymdR6VwAgw+P+RIOiw3nf/puKIVM4ttz+RkeASZnjwLwVoSeffy+TH\n/2XSK1qK007hvM3dimw18teZT2ovrcMFQcEyhvK4p9wdaN28QkNCDCALVTsZ/Uef\nX43mh8Y9AgMBAAECgf9QyoS7Ry5jzDwo+P40PaiXof4Odpwu57swTYDRSuoEWcb+\n+OMKRBuUfLqN2AyXezfUBG++VgFH0UKd1pJ3xbmRhcR6ECdEfqI96ALElfscJtU4\nYlA8kaCeI0fZbvW/4sWWcMM12TleMBy8fRUpVVgmtM6Bfpe4gnroPAPkh1PMPt1f\n3H8LFk4gJBLI6F3avZD4SlD4lWTLyRljNYlTIoIKDJqofhM5lgXTRIKhwAEgQS2U\nAxL/qsyWvK3Oke+DpPySnQRUoDi5AB3c025PbuWt/Lwuflkk4iwFnOY6eqkND7+n\ndbwfjvtfN9b36DTIVGweL0ewXLDfUqFioDJpJKUCgYEA96SvLflqRqVQdqPX1pPu\nTVwl1wWy22LVDWbOKobYBvjusL0sdWXVn1KrwTZ6CjT4I0nk3d7kczk++ac2o6i+\nVChIcfaqk+sfOSvG18Di3CkJEdWoml4T7ZkKnBg4jJ2A4ZUMzXK1rObIf6bLZd/W\nVFwcxZ4EK3T1RSQv5p3jy+sCgYEA1hKiOxfTA7TZR0gxB2RyvmJTtMuSC9A4kvD/\nQGAAbQNtG79RRzeSEL1Pb1Ym71QB0dr2LDR22qcae4tFdkuVoCji6p0JsCRqRNLz\nmQuT2zJvg2HiUE3mcJMoOH5QE9Ic9yLmLlrVTKmLjVg80PntkYZ4ImK2P5K8lZMW\nT7/Y9HcCgYEA8t7ud3ZPRm3HFjPl8KowYmpnKhSKryKktHoI5ChPIbdt0KQXQCPZ\neGHJ1LoqwmvkmCdWcEqzXlXcb1gQ/Dz4PO0s76fs7xj/DEDkyKCBXU5ZeMZEjvCJ\nNtKLVz9h5nZp+dMGNU+04ZeNN7RLcuQt/ZpBFYa9rCkOivrMh659xHUCgYAKlHsu\nHnxQV5TRgBDkQ6OkIynt6o26Rb02DfEfll8PBDdVQrxan7V5XFHbt89OzsEURRUb\nlDA3mECn0HdLZGrtsnecjsxWx0X1RtPBQaA6GiEGxkSwIVl9QNihCiUdBapm0HO9\n4MFf+5UpFC5VSbTjF1lCocxOEgt9/PoCUQIA+wKBgGs7MwJfTxFyl+EwjyviKuMd\njwv+XGWSgn5iakiSqKkFKF1AXn4/HWgoIY1Gfu90foW/rUygshAEN4o3gmvv7W2m\nKICHFVLh6tlAuArRureHShwB7s5FMreDd3pJEVEvA3ENm2PZrCZS5uzQXbwKFkVS\nFXR4A2Dnp/kxe6lEE1MB\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloudstorage@justgo-188407.iam.gserviceaccount.com",
+  "client_id": "101476556944414518398",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudstorage%40justgo-188407.iam.gserviceaccount.com"
+}

@@ -2,6 +2,8 @@ Django==1.11.11
 pytz==2018.3
 oauth2client
 gcloud
+google-cloud
+requests-toolbelt
 # install these on local machine only
 #MySQL-python==1.2.5
 #mysqlclient==1.3.7

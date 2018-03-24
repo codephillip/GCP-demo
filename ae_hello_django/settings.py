@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pn7)0kkfg&u1jee7&j^^2hyia+c#x$ohfug+h*&6v2qa6dt*wv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ae_hello_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+
         },
     },
 ]
@@ -89,29 +90,29 @@ CLOUDSQL_INSTANCE = 'hellocloud-sql'
 # CLOUDSQL_INSTANCE = 'hellosql-instance'
 
 
-if isLocal():
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'hellocloud_database',
-            'USER': 'admin',
-            'PASSWORD': 'XXXX',
-            'HOST': '173.194.228.248',
-            'PORT': '3306',
-        }
-    }
-else:
-    DEBUG = False
-    # 2st generation cloud sql
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'hellocloud_database',
-            'USER': 'admin',
-            'PASSWORD': 'XXXX',
-            'HOST': '/cloudsql/' + CLOUDSQL_PROJECT + ":" + CLOUDSQL_REGION + ":" + CLOUDSQL_INSTANCE
-        }
-    }
+# if isLocal():
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'hellocloud_database',
+#             'USER': 'admin',
+#             'PASSWORD': 'password123',
+#             'HOST': '173.194.228.248',
+#             'PORT': '3306',
+#         }
+#     }
+# else:
+#     DEBUG = False
+#     # 2st generation cloud sql
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'hellocloud_database',
+#             'USER': 'admin',
+#             'PASSWORD': 'password123',
+#             'HOST': '/cloudsql/' + CLOUDSQL_PROJECT + ":" + CLOUDSQL_REGION + ":" + CLOUDSQL_INSTANCE
+#         }
+#     }
 
     # 1st generation cloud sql
     # DATABASES = {
@@ -166,7 +167,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "staticfiles"),
 ]
-
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
