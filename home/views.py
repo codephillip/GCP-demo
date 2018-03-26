@@ -49,7 +49,7 @@ def save_file(file):
     # Save file and make it public
     try:
         blob = bucket.blob(file.name)
-        blob.upload_from_file(ContentFile(file.read()))
+        blob.upload_from_file(file)
         blob.make_public()
     except Exception as e:
         logging.error(e.message)
@@ -62,6 +62,6 @@ def save_file_no_cred(file):
     client = storage.Client()
     bucket = client.get_bucket(BUCKET_NAME)
     blob = bucket.blob(file.name)
-    blob.upload_from_string(file.read())
+    blob.upload_from_file(file)
     blob.make_public()
     return blob.public_url
