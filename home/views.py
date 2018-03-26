@@ -21,10 +21,8 @@ def index(request):
         if request.method == 'POST':
             task = request.POST.get('task', '')
             file = request.FILES['myfile']
-            print(file.name)
             file_url = save_file(file)
             create_todo_model(task, file_url)
-            print(file_url)
 
         todos = get_all_todos()
         return render(request, 'todo.html', {

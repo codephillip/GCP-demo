@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+import logging
+
 from ae_hello_django.settings import isLocal
 import datetime
 import time
@@ -21,7 +24,7 @@ class TodoModel(ndb.Model):
 
 
 def create_todo_model(task, file_url, done=False):
-    print("create todo")
+    logging.debug("create todo")
     id = datetime_in_millis()
     todo_key = ndb.Key(TodoModel, id)
     todo_model = TodoModel()
@@ -34,9 +37,8 @@ def create_todo_model(task, file_url, done=False):
 
 
 def get_all_todos():
-    print("Get all todo")
+    logging.debug("Get all todo")
     todo_models = TodoModel.query().fetch()
-    print list(todo_models)
     return todo_models
 
 
