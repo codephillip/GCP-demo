@@ -26,10 +26,10 @@ def index(request):
             create_todo_model(task, file_url)
             print(file_url)
 
-            todos = get_all_todos()
-            return render(request, 'todo.html', {
-                'todos': todos,
-            })
+        todos = get_all_todos()
+        return render(request, 'todo.html', {
+            'todos': todos,
+        })
     except Exception as e:
         logging.error(e.message)
         return HttpResponse("Hello world!")
